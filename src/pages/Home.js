@@ -1,13 +1,13 @@
 import  { useContext } from 'react'
 import Feed from './Feed'
-import DataContext from './contextapi/DataContext'
+import DataContext from '../contextapi/DataContext'
 
 const Home = () =>{
-   const {searchResults} = useContext(DataContext)
+   const {posts} = useContext(DataContext)
   return (
     <main className='Home'>
-      {searchResults.length ? (
-        <Feed posts={searchResults}/>
+      {posts.length ? (
+        <Feed posts={posts}/>
       ) : (
         <p style={{marginTop:"2rem"}}> 
           No posts to display.

@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import DataContext from "./contextapi/DataContext"
+import DataContext from "../contextapi/DataContext"
 
 
 const NewPost = ()  =>{

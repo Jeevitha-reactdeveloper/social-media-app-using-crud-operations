@@ -1,7 +1,7 @@
 import  { useContext } from 'react'
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import DataContext from './contextapi/DataContext'
+import DataContext from '../contextapi/DataContext'
 
 const Editpost =() => {
      const{posts,handleEdit,editBody,seteditbody,editTitle,seteditTitle} = useContext(DataContext)

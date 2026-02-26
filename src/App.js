@@ -1,14 +1,13 @@
-import About from './About';
-import './App.css';
-import Footer from './Footer';
-import Header from './Header';
-import Home from './Home';
-import Missing from './Missing';
-import NewPost from './NewPost';
-import PostPage from './PostPage';
-import Nav from './Nav';
+import About from './pages/About';
+import Footer from './Common/Footer';
+import Header from './Common/Header';
+import Home from './pages/Home';
+import Missing from './Common/Missing';
+import NewPost from './pages/NewPost';
+import PostPage from './pages/PostPage';
+import Nav from './Common/Nav';
 import {Routes, Route } from 'react-router-dom';
-import Editpost from './Editpost';
+import Editpost from './pages/Editpost';
 import { DataProvider } from './contextapi/DataContext';
 
 
@@ -20,16 +19,13 @@ return (
         <Header title="Social Media App" />
         <Nav/>
         <Routes>
-          <Route path='/'  element ={ <Home/>}
-            />
-
-          <Route path='post'> 
+          <Route path='/'  element ={ <Home/>}/>
+          <Route path='/post'> 
               <Route index element={<NewPost />}/>
-
               <Route path=':id'  element={<PostPage/>}/>
-            </Route>
+          </Route>
             <Route path='/edit/:id' element={<Editpost />}/>
-            <Route path='about'  element={<About/>}/>
+            <Route path='/about'  element={<About/>}/>
             <Route path='*' element={<Missing/>}/>
         </Routes>
         <Footer/> 

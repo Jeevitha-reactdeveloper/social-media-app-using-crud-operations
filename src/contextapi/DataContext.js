@@ -39,7 +39,8 @@ export const DataProvider = ({children}) => {
   useEffect(() => {
   const filteredResults = posts.filter(post =>
     ((post.title).toLowerCase().includes(search.toLowerCase())) ||   
-     ((post.body).toLowerCase().includes(search.toLowerCase()) ))
+     ((post.body).toLowerCase().includes(search.toLowerCase()) )
+    )
     setsearchResults(
     search ? filteredResults.reverse() : posts.slice().reverse())
   
